@@ -14,6 +14,9 @@ const tracks = [
 function App() {
   const [searchResult, setSearchResult] = useState([]);
   const [playList, setPlayList] = useState([]);
+  const [playlistName, setPlaylistName] = useState('');
+  
+  const updatePlaylistName = name => setPlaylistName(name);
 
   useEffect(() => {
     setSearchResult(tracks);
@@ -47,8 +50,12 @@ function App() {
               searchResults={searchResult} 
               onAdd={addTrack}
                />
-          <PlayList playList={playList}
-              onRemove={removeTrack} />
+          <PlayList 
+              playList={playList}
+              playlistName={playlistName}
+              onRemove={removeTrack}
+              onNameChange={updatePlaylistName} />
+              
         </div>
       </div>
     </div>
