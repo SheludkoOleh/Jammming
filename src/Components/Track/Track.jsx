@@ -1,18 +1,18 @@
-import React, { useMemo } from "react";
+import React from "react";
 import './track.css';
 
 function Track({ track, isRemoval, onAdd, onRemove }) {
   const addTrack = () => onAdd(track);
   const removeTrack = () => onRemove(track);
 
-  const renderAction = useMemo(() => {
+  function renderAction() {
     if (isRemoval) {
       return <button className="trackAction" onClick={removeTrack}>-</button>;
     }
     return (
       <button className="trackAction" onClick={addTrack}>+</button>
     );
-  }, [isRemoval]);
+  }
 
   return (
     <div className="track">
