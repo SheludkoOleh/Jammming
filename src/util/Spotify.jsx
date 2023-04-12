@@ -1,6 +1,7 @@
 const clientID = "7ace23c1409a4792a9c3cefeac5fa7ba";
 // const clientSecret = "a34d73d2456244f286d46747330ae602";
-const redirectURI = "http://localhost:3002/";
+// const redirectURI = "http://localhost:3002/";
+const redirectURI = 'https://my-jammming-app.netlify.app/'
 // const API_BASE_URL = "https://api.spotify.com/v1";
 
 
